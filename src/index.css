@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg-primary: #050816;
+  --bg-secondary: #0a0f1e;
+  --bg-card: rgba(10, 15, 40, 0.6);
+  --accent-blue: #ff6a00;
+  --accent-purple: #ff4500;
+  --accent-cyan: #ffd700;
+  --gradient-main: linear-gradient(135deg, #ff6a00, #ee0979);
+  --gradient-text: linear-gradient(90deg, #ffd700, #ff6a00, #ee0979);
+  /* Fire Theme */
+  --fire-core: #ff6a00;
+  --fire-mid: #ee0979;
+  --fire-hot: #ff4500;
+  --fire-gold: #ffd700;
+  --fire-glow: #ff8c00;
+  --gradient-fire: linear-gradient(135deg, #ff6a00, #ee0979);
+  --gradient-fire-text: linear-gradient(90deg, #ffd700, #ff6a00, #ee0979);
+  --shadow-fire: 0 0 40px rgba(255, 100, 0, 0.45);
+  /* Text */
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --shadow-glow-blue: 0 0 40px rgba(255, 106, 0, 0.3);
+  --shadow-glow-purple: 0 0 40px rgba(255, 69, 0, 0.3);
+  --font-main: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--fire-core), var(--fire-mid));
+  border-radius: 3px;
+}
+
+/* Gradient Text Utility */
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fire-text {
+  background: var(--gradient-fire-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(255, 100, 0, 0.5));
+}
+
+/* Glass Card Utility */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+}
+
+/* Section Base */
+section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section Heading */
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--fire-core);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+  text-shadow: 0 0 12px rgba(255, 106, 0, 0.4);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+/* Glow Background Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb-fire {
+  background: var(--fire-core);
+}
+
+.orb-gold {
+  background: var(--fire-gold);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--gradient-main);
+  color: white;
+  box-shadow: 0 8px 32px rgba(255, 106, 0, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(255, 106, 0, 0.6);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-glass);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  border-color: var(--fire-core);
+  color: var(--fire-core);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 106, 0, 0.2);
+}
+
+/* Star Background */
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}

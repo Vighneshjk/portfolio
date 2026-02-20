@@ -1,0 +1,77 @@
+.achievements {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, transparent, rgba(10, 5, 30, 0.3), transparent);
+}
+
+.achievements__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.achievements__header .section-subtitle {
+    margin: 0 auto;
+}
+
+.achievements__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.ach-card {
+    padding: 32px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+.ach-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.4));
+}
+
+.ach-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.ach-card__desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Shine effect on hover */
+.ach-card__shine {
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+    transform: rotate(30deg);
+    pointer-events: none;
+    transition: left 0.5s;
+}
+
+.ach-card:hover .ach-card__shine {
+    left: 120%;
+}
+
+@media (max-width: 768px) {
+    .achievements__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .achievements__grid {
+        grid-template-columns: 1fr;
+    }
+}

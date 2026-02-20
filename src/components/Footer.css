@@ -1,0 +1,110 @@
+.footer {
+    border-top: 1px solid var(--border-glass);
+    background: rgba(5, 8, 22, 0.8);
+    backdrop-filter: blur(16px);
+    padding: 60px 0 36px;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.footer__logo {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer__tagline {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+}
+
+.footer__link {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: var(--font-main);
+    padding: 0;
+}
+
+.footer__link:hover {
+    color: var(--accent-blue);
+}
+
+.footer__socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-social-icon:hover {
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    background: rgba(79, 110, 247, 0.1);
+}
+
+.footer__divider {
+    height: 1px;
+    background: var(--border-glass);
+    margin-bottom: 28px;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer__copy {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footer__back-top {
+    background: none;
+    border: 1px solid var(--border-glass);
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-family: var(--font-mono);
+    padding: 7px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.footer__back-top:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}

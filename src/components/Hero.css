@@ -1,0 +1,516 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Hero Section — Fire Theme Edition
+═══════════════════════════════════════════════════════════════════ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero__canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero__fire-ambient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 280px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.35;
+}
+
+.hero__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.14;
+    pointer-events: none;
+}
+
+.hero__orb--blue {
+    width: 600px;
+    height: 600px;
+    background: #4f6ef7;
+    top: -150px;
+    left: -150px;
+}
+
+.hero__orb--purple {
+    width: 500px;
+    height: 500px;
+    background: #8b5cf6;
+    bottom: -100px;
+    right: -100px;
+}
+
+/* ── Container ─────────────────────────────────────────────── */
+.hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* ── Badge ──────────────────────────────────────────────────── */
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(255, 106, 0, 0.1);
+    border: 1px solid rgba(255, 106, 0, 0.3);
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-family: var(--font-mono);
+    color: var(--fire-glow);
+    margin-bottom: 24px;
+}
+
+.badge__dot {
+    width: 8px;
+    height: 8px;
+    background: #22d3a0;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22d3a0;
+    animation: pulse-dot 2s ease infinite;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .4
+    }
+}
+
+/* ── Title ──────────────────────────────────────────────────── */
+.hero__title {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+/* ── Typewriter ─────────────────────────────────────────────── */
+.hero__typewriter {
+    font-size: 1.2rem;
+    font-family: var(--font-mono);
+    color: var(--fire-core);
+    font-weight: 600;
+    margin-bottom: 14px;
+    min-height: 32px;
+    text-shadow: 0 0 18px rgba(255, 106, 0, 0.6);
+}
+
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+    color: var(--fire-gold);
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+/* ── Role tags line ─────────────────────────────────────────── */
+.hero__role-tags {
+    font-size: 0.88rem;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+}
+
+.role-divider {
+    color: var(--text-muted);
+    margin: 0 4px;
+}
+
+/* ── Description ────────────────────────────────────────────── */
+.hero__description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    max-width: 480px;
+    margin-bottom: 36px;
+}
+
+/* ── Fire Button ────────────────────────────────────────────── */
+.btn-fire {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--fire-core), var(--fire-mid));
+    color: white;
+    box-shadow: 0 8px 32px rgba(255, 106, 0, 0.45);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-fire::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--fire-gold), var(--fire-core));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-fire:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 44px rgba(255, 106, 0, 0.65);
+}
+
+.btn-fire:hover::before {
+    opacity: 1;
+}
+
+.btn-fire>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Actions & Socials ──────────────────────────────────────── */
+.hero__actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.hero__socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background: rgba(255, 106, 0, 0.12);
+    border-color: var(--fire-core);
+    color: var(--fire-core);
+    box-shadow: 0 0 16px rgba(255, 106, 0, 0.3);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   3-D FIRE ORB
+══════════════════════════════════════════════════════════════ */
+.hero__visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fire-orb-wrapper {
+    position: relative;
+    width: 340px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fire-orb {
+    width: 240px;
+    height: 240px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Spinning rings */
+.fire-orb__ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+.fire-orb__ring--1 {
+    width: 240px;
+    height: 240px;
+    border-color: rgba(255, 106, 0, 0.6);
+    animation: spin-ring-1 6s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 106, 0, 0.4), inset 0 0 20px rgba(255, 106, 0, 0.1);
+}
+
+.fire-orb__ring--2 {
+    width: 200px;
+    height: 200px;
+    border-color: rgba(238, 9, 121, 0.5);
+    animation: spin-ring-2 4s linear infinite reverse;
+    box-shadow: 0 0 16px rgba(238, 9, 121, 0.35);
+}
+
+.fire-orb__ring--3 {
+    width: 160px;
+    height: 160px;
+    border-color: rgba(255, 215, 0, 0.45);
+    animation: spin-ring-3 3s linear infinite;
+    box-shadow: 0 0 14px rgba(255, 215, 0, 0.3);
+}
+
+@keyframes spin-ring-1 {
+    from {
+        transform: rotateX(70deg) rotateZ(0deg)
+    }
+
+    to {
+        transform: rotateX(70deg) rotateZ(360deg)
+    }
+}
+
+@keyframes spin-ring-2 {
+    from {
+        transform: rotateX(20deg) rotateZ(0deg)
+    }
+
+    to {
+        transform: rotateX(20deg) rotateZ(360deg)
+    }
+}
+
+@keyframes spin-ring-3 {
+    from {
+        transform: rotateY(60deg) rotateZ(0deg)
+    }
+
+    to {
+        transform: rotateY(60deg) rotateZ(360deg)
+    }
+}
+
+/* Core sphere */
+.fire-orb__core {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ffd700, #ff6a00 50%, #ee0979 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-shadow:
+        0 0 30px rgba(255, 106, 0, 0.8),
+        0 0 60px rgba(255, 106, 0, 0.4),
+        0 0 100px rgba(238, 9, 121, 0.3);
+    animation: core-pulse 2.5s ease-in-out infinite;
+    position: relative;
+    z-index: 5;
+}
+
+@keyframes core-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 30px rgba(255, 106, 0, 0.8), 0 0 60px rgba(255, 106, 0, 0.4), 0 0 100px rgba(238, 9, 121, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 50px rgba(255, 106, 0, 1), 0 0 90px rgba(255, 106, 0, 0.6), 0 0 140px rgba(238, 9, 121, 0.5);
+    }
+}
+
+.fire-orb__emoji {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 8px rgba(255, 200, 0, 0.8));
+    animation: emoji-bounce 2s ease-in-out infinite;
+}
+
+@keyframes emoji-bounce {
+
+    0%,
+    100% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.15)
+    }
+}
+
+.fire-orb__label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+/* Fire particles under orb */
+.fire-orb__particles-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Holo floating badges */
+.holo {
+    position: absolute;
+    padding: 7px 14px;
+    background: rgba(10, 15, 40, 0.85);
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    backdrop-filter: blur(8px);
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.holo--tl {
+    border: 1px solid rgba(255, 106, 0, 0.4);
+    top: 20px;
+    left: -10px;
+}
+
+.holo--tr {
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    top: 60px;
+    right: -10px;
+}
+
+.holo--br {
+    border: 1px solid rgba(238, 9, 121, 0.4);
+    bottom: 70px;
+    right: -10px;
+}
+
+.holo--bl {
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    bottom: 30px;
+    left: -10px;
+}
+
+/* ── Scroll hint ─────────────────────────────────────────────── */
+.hero__scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+}
+
+.scroll-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--fire-core);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--fire-core);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .hero__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero__visual {
+        order: -1;
+    }
+
+    .hero__actions {
+        justify-content: center;
+    }
+
+    .hero__socials {
+        justify-content: center;
+    }
+
+    .hero__description {
+        margin: 0 auto 32px;
+    }
+
+    .fire-orb-wrapper {
+        width: 280px;
+        height: 300px;
+    }
+
+    .fire-orb {
+        width: 180px;
+        height: 180px;
+    }
+
+    .fire-orb__ring--1 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .fire-orb__ring--2 {
+        width: 148px;
+        height: 148px;
+    }
+
+    .fire-orb__ring--3 {
+        width: 116px;
+        height: 116px;
+    }
+
+    .fire-orb__core {
+        width: 90px;
+        height: 90px;
+    }
+}
