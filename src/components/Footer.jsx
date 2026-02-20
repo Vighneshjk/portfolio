@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer__top">
                     <div className="footer__brand">
-                        <span className="footer__logo gradient-text">&lt;VJ108/&gt;</span>
+                        <span className="footer__logo gradient-text">&lt;VJ/&gt;</span>
                         <p className="footer__tagline">
                             Django Full Stack Developer · Python · AI Enthusiast
                         </p>
@@ -44,7 +44,7 @@ const Footer = () => {
 
                 <div className="footer__bottom">
                     <p className="footer__copy">
-                        © {year} Vighnesh (VJ108). Crafted with <FiHeart style={{ color: '#f43f5e', display: 'inline', verticalAlign: 'middle' }} /> in India.
+                        © {year} Vighnesh (VJ). Crafted with <FiHeart style={{ color: '#f43f5e', display: 'inline', verticalAlign: 'middle' }} /> in India.
                     </p>
                     <button className="footer__back-top" onClick={scrollTop}>
                         ↑ Back to Top

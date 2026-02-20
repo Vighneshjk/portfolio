@@ -77,8 +77,8 @@ const FireOrb = () => (
             <div className="fire-orb__ring fire-orb__ring--2" />
             <div className="fire-orb__ring fire-orb__ring--3" />
             <div className="fire-orb__core">
-                <span className="fire-orb__emoji">🔥</span>
-                <span className="fire-orb__label gradient-text fire-text">VJ108</span>
+                <span className="fire-orb__emoji"></span>
+                <span className="fire-orb__label gradient-text fire-text">VJ</span>
             </div>
         </motion.div>
         {/* Fire particles rising from orb base */}
@@ -197,7 +197,7 @@ const Hero = () => {
                         transition={{ delay: 1 }}
                     >
                         <motion.a
-                            href="/resume.pdf"
+                            href="/vighneshjk.pdf"
                             download
                             className="btn btn-fire"
                             whileHover={{ scale: 1.06 }}

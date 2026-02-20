@@ -48,7 +48,7 @@ const Navbar = () => {
                         onClick={() => scrollTo('home')}
                     >
                         <span className="logo__bracket">&lt;</span>
-                        <span className="logo__name fire-text">VJ108</span>
+                        <span className="logo__name fire-text">VJ</span>
                         <span className="logo__bracket">/&gt;</span>
                     </motion.div>
 

@@ -60,7 +60,7 @@ const About = () => {
                             </div>
 
                             <div className="profile-card__actions">
-                                <a href="/resume.pdf" download className="btn btn-primary btn-full">
+                                <a href="/vighneshjk.pdf" download className="btn btn-primary btn-full">
                                     <FiDownload /> Download CV
                                 </a>
                             </div>

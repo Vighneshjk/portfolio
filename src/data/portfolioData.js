@@ -23,7 +23,7 @@ export const navLinks = [
 ];
 
 export const socialLinks = {
-    github: 'https://github.com/vighneshjk',
+    github: 'https://github.com/Vighneshjk',
     linkedin: 'https://www.linkedin.com/in/vighnesh-jk-033223357',
     email: 'vighneshjk1@gmail.com',
 };
