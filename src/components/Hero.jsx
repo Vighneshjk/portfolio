@@ -28,7 +28,7 @@ const HeroCanvas = () => {
                     r: Math.random() * 1.8 + 0.4,
                     dx: (Math.random() - 0.5) * 0.35,
                     dy: (Math.random() - 0.5) * 0.35,
-                    hue: Math.random() > 0.5 ? 25 : 45, // Fire hues: orange and gold
+                    hue: Math.random() > 0.4 ? 230 : 270,
                 });
             }
         };
@@ -51,7 +51,7 @@ const HeroCanvas = () => {
                     if (d < 110) {
                         ctx.beginPath();
                         ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
-                        ctx.strokeStyle = `rgba(255, 120, 0, ${0.15 * (1 - d / 110)})`;
+                        ctx.strokeStyle = `rgba(139,92,246,${0.12 * (1 - d / 110)})`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
