@@ -24,10 +24,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 280px;
+    height: 60vh;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.35;
+    opacity: 0.45;
 }
 
 .hero__orb {
@@ -41,7 +41,7 @@
 .hero__orb--blue {
     width: 600px;
     height: 600px;
-    background: #4f6ef7;
+    background: var(--fire-core);
     top: -150px;
     left: -150px;
 }
@@ -49,7 +49,7 @@
 .hero__orb--purple {
     width: 500px;
     height: 500px;
-    background: #8b5cf6;
+    background: var(--fire-mid);
     bottom: -100px;
     right: -100px;
 }

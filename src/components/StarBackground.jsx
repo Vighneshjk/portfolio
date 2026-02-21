@@ -16,15 +16,29 @@ const StarBackground = () => {
 
         const initStars = () => {
             stars = [];
-            for (let i = 0; i < 180; i++) {
+            // Standard stars
+            for (let i = 0; i < 150; i++) {
                 stars.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
                     r: Math.random() * 1.5 + 0.2,
                     alpha: Math.random(),
-                    speed: Math.random() * 0.004 + 0.001,
+                    speed: Math.random() * 0.003 + 0.001,
                     phase: Math.random() * Math.PI * 2,
-                    drift: (Math.random() - 0.5) * 0.08,
+                    drift: (Math.random() - 0.5) * 0.05,
+                    type: 'star'
+                });
+            }
+            // Fire embers
+            for (let i = 0; i < 40; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    r: Math.random() * 2 + 1,
+                    speed: Math.random() * 0.5 + 0.2,
+                    drift: (Math.random() - 0.5) * 0.15,
+                    type: 'ember',
+                    hue: Math.random() * 20 + 10, // Orange-ish
                 });
             }
         };
@@ -32,15 +46,33 @@ const StarBackground = () => {
         const draw = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             stars.forEach((s) => {
-                s.phase += s.speed;
-                s.x += s.drift;
-                if (s.x < 0) s.x = canvas.width;
-                if (s.x > canvas.width) s.x = 0;
-                const alpha = 0.3 + 0.7 * Math.abs(Math.sin(s.phase));
-                ctx.beginPath();
-                ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(200, 210, 255, ${alpha})`;
-                ctx.fill();
+                if (s.type === 'star') {
+                    s.phase += s.speed;
+                    s.x += s.drift;
+                    if (s.x < 0) s.x = canvas.width;
+                    if (s.x > canvas.width) s.x = 0;
+                    const alpha = 0.2 + 0.5 * Math.abs(Math.sin(s.phase));
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(200, 210, 255, ${alpha})`;
+                    ctx.fill();
+                } else {
+                    // Ember animation
+                    s.y -= s.speed;
+                    s.x += s.drift + Math.sin(Date.now() * 0.001 + s.x) * 0.1;
+                    if (s.y < -10) s.y = canvas.height + 10;
+                    if (s.x < 0) s.x = canvas.width;
+                    if (s.x > canvas.width) s.x = 0;
+
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                    const alpha = 0.3 + 0.4 * Math.random();
+                    ctx.fillStyle = `hsla(${s.hue}, 100%, 60%, ${alpha})`;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = `hsla(${s.hue}, 100%, 50%, 0.8)`;
+                    ctx.fill();
+                    ctx.shadowBlur = 0; // Reset for performance
+                }
             });
             animFrameId = requestAnimationFrame(draw);
         };
@@ -50,9 +82,14 @@ const StarBackground = () => {
         draw();
         window.addEventListener('resize', () => { resize(); initStars(); });
 
+        const resizeThrottle = () => {
+            resize();
+            initStars();
+        };
+
         return () => {
             cancelAnimationFrame(animFrameId);
-            window.removeEventListener('resize', resize);
+            window.removeEventListener('resize', resizeThrottle);
         };
     }, []);
 

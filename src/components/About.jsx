@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { profile, hireMe } from '../data/portfolioData';
 import { FiDownload, FiCheckCircle, FiMapPin, FiCalendar, FiMail } from 'react-icons/fi';
 import resumeFile from '../assets/vighneshjk.pdf';
+import FireParticles from './FireParticles';
 import './About.css';
 
 const About = () => {
@@ -12,6 +13,12 @@ const About = () => {
     return (
         <section className="about" id="about" ref={ref}>
             <div className="orb orb-fire" style={{ width: 500, height: 500, top: '5%', left: '-10%' }} />
+
+            {/* Transition fire from Hero to About */}
+            <div className="about__fire-top">
+                <FireParticles intensity={30} style={{ height: '200px', top: '-100px', bottom: 'auto' }} />
+            </div>
+
             <div className="container">
                 <div className="about__grid">
 
