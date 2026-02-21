@@ -29,7 +29,7 @@ const StarBackground = () => {
             }
         };
 
-        const draw = (t) => {
+        const draw = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             stars.forEach((s) => {
                 s.phase += s.speed;
@@ -47,7 +47,7 @@ const StarBackground = () => {
 
         resize();
         initStars();
-        draw(0);
+        draw();
         window.addEventListener('resize', () => { resize(); initStars(); });
 
         return () => {

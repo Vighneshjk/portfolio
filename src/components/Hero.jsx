@@ -197,7 +197,7 @@ const Hero = () => {
                         transition={{ delay: 1 }}
                     >
                         <motion.a
-                            href="/vighneshjk.pdf"
+                            href={`${import.meta.env.BASE_URL}vighneshjk.pdf`}
                             download
                             className="btn btn-fire"
                             whileHover={{ scale: 1.06 }}
