@@ -13,11 +13,7 @@ const About = () => {
     return (
         <section className="about" id="about" ref={ref}>
             <div className="orb orb-fire" style={{ width: 500, height: 500, top: '5%', left: '-10%' }} />
-
-            {/* Transition fire from Hero to About */}
-            <div className="about__fire-top">
-                <FireParticles intensity={30} style={{ height: '200px', top: '-100px', bottom: 'auto' }} />
-            </div>
+            <FireParticles intensity={40} style={{ opacity: 0.4 }} />
 
             <div className="container">
                 <div className="about__grid">

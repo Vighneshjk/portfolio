@@ -134,19 +134,6 @@ section {
   opacity: 0.15;
   pointer-events: none;
   z-index: 0;
-  animation: orb-breathe 8s ease-in-out infinite alternate;
-}
-
-@keyframes orb-breathe {
-  0% {
-    transform: scale(1) translate(0, 0);
-    opacity: 0.12;
-  }
-
-  100% {
-    transform: scale(1.15) translate(10px, -20px);
-    opacity: 0.2;
-  }
 }
 
 .orb-fire {

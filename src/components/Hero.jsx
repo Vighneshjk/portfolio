@@ -82,9 +82,8 @@ const FireOrb = () => (
                 <span className="fire-orb__label gradient-text fire-text">VJ</span>
             </div>
         </motion.div>
-        {/* Fire particles rising from orb base */}
         <div className="fire-orb__particles-container">
-            <FireParticles intensity={60} />
+            <FireParticles intensity={40} style={{ height: '150%', bottom: '-25%' }} />
         </div>
 
         {/* Floating holo-badges */}
@@ -120,7 +119,7 @@ const Hero = () => {
             <div className="hero__orb hero__orb--purple" />
             {/* Subtle fire ambient at bottom of hero */}
             <div className="hero__fire-ambient">
-                <FireParticles intensity={40} />
+                <FireParticles intensity={120} />
             </div>
 
             <div className="container hero__container">

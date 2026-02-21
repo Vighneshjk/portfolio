@@ -3,17 +3,6 @@
     overflow: hidden;
 }
 
-.about__fire-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.4;
-}
-
 .about__grid {
     display: grid;
     grid-template-columns: 400px 1fr;

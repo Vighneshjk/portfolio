@@ -1,4 +1,4 @@
-import StarBackground from './components/StarBackground';
+import FireBackground from './components/FireBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,8 +12,8 @@ import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <>
-      {/* Animated star canvas (fixed behind everything) */}
-      <StarBackground />
+      {/* Animated fire background (fixed behind everything) */}
+      <FireBackground />
 
       {/* Sticky Navigation */}
       <Navbar />
