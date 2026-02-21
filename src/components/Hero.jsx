@@ -4,6 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { FiGithub, FiLinkedin, FiMail, FiDownload, FiCode } from 'react-icons/fi';
 import { socialLinks, TYPING_ROLES } from '../data/portfolioData';
 import FireParticles from './FireParticles';
+import resumeFile from '../assets/vighneshjk.pdf';
 import './Hero.css';
 
 /* ── Floating network-particle canvas (behind content) ──────────────── */
@@ -197,8 +198,8 @@ const Hero = () => {
                         transition={{ delay: 1 }}
                     >
                         <motion.a
-                            href={`${import.meta.env.BASE_URL}vighneshjk.pdf`}
-                            download
+                            href={resumeFile}
+                            download="VighneshJK_Resume.pdf"
                             className="btn btn-fire"
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.95 }}

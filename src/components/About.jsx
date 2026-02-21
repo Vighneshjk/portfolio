@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { profile, hireMe } from '../data/portfolioData';
 import { FiDownload, FiCheckCircle, FiMapPin, FiCalendar, FiMail } from 'react-icons/fi';
+import resumeFile from '../assets/vighneshjk.pdf';
 import './About.css';
 
 const About = () => {
@@ -60,7 +61,7 @@ const About = () => {
                             </div>
 
                             <div className="profile-card__actions">
-                                <a href={`${import.meta.env.BASE_URL}vighneshjk.pdf`} download className="btn btn-primary btn-full">
+                                <a href={resumeFile} download="VighneshJK_Resume.pdf" className="btn btn-primary btn-full">
                                     <FiDownload /> Download CV
                                 </a>
                             </div>
