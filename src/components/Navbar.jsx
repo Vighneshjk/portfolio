@@ -48,7 +48,7 @@ const Navbar = () => {
                         onClick={() => scrollTo('home')}
                     >
                         <span className="logo__bracket">&lt;</span>
-                        <span className="logo__name fire-text">VJ</span>
+                        <span className="logo__name thunder-text">VJ</span>
                         <span className="logo__bracket">/&gt;</span>
                     </motion.div>
 
@@ -71,12 +71,12 @@ const Navbar = () => {
 
                     {/* Hire Me CTA */}
                     <motion.button
-                        className="navbar__cta btn btn-fire"
+                        className="navbar__cta btn btn-thunder"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => scrollTo('contact')}
                     >
-                        🔥 Hire Me
+                        ⚡ Hire Me
                     </motion.button>
 
                     {/* Hamburger */}

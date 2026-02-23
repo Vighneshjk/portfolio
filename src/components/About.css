@@ -24,15 +24,15 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 106, 0, 0.2);
-    /* Orange tint border */
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    /* Blue tint border */
     box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
 .profile-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px -10px rgba(255, 106, 0, 0.15);
-    border-color: rgba(255, 106, 0, 0.4);
+    box-shadow: 0 20px 50px -10px rgba(0, 210, 255, 0.15);
+    border-color: rgba(0, 210, 255, 0.4);
 }
 
 /* Header */
@@ -50,8 +50,8 @@
     height: 120px;
     border-radius: 50%;
     padding: 4px;
-    background: linear-gradient(135deg, var(--fire-core), var(--fire-mid));
-    box-shadow: 0 0 20px rgba(255, 106, 0, 0.4);
+    background: linear-gradient(135deg, var(--thunder-core), var(--thunder-mid));
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
 }
 
 .profile-avatar {
@@ -122,7 +122,7 @@
 }
 
 .info-icon {
-    color: var(--fire-core);
+    color: var(--thunder-core);
     font-size: 1.1rem;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .info-link:hover {
-    color: var(--fire-core);
+    color: var(--thunder-core);
 }
 
 /* Stats Grid */
@@ -193,7 +193,7 @@
 }
 
 .about__text .highlight {
-    color: var(--fire-core);
+    color: var(--thunder-core);
 }
 
 /* Hire Me Grid */
@@ -215,14 +215,14 @@
 
 .hire-card:hover {
     transform: translateY(-4px);
-    background: rgba(255, 106, 0, 0.05);
-    border-color: rgba(255, 106, 0, 0.3);
+    background: rgba(0, 210, 255, 0.05);
+    border-color: rgba(0, 210, 255, 0.3);
 }
 
 .hire-card__icon {
     font-size: 1.5rem;
-    color: var(--fire-gold);
-    background: rgba(255, 215, 0, 0.1);
+    color: var(--thunder-strike);
+    background: rgba(0, 242, 254, 0.1);
     width: 40px;
     height: 40px;
     display: flex;

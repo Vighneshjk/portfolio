@@ -9,7 +9,7 @@ const Achievements = () => {
 
     return (
         <section className="achievements" id="achievements" ref={ref}>
-            <div className="orb orb-gold" style={{ width: 450, height: 450, top: '10%', right: '-15%' }} />
+            <div className="orb orb-thunder" style={{ width: 450, height: 450, top: '10%', right: '-15%' }} />
             <div className="container">
                 <motion.div
                     className="achievements__header"

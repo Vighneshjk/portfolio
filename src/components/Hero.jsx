@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FiGithub, FiLinkedin, FiMail, FiDownload, FiCode } from 'react-icons/fi';
 import { socialLinks, TYPING_ROLES } from '../data/portfolioData';
-import FireParticles from './FireParticles';
+import ThunderParticles from './ThunderParticles';
 import resumeFile from '../assets/vighneshjk.pdf';
 import './Hero.css';
 
@@ -28,7 +28,7 @@ const HeroCanvas = () => {
                     r: Math.random() * 1.8 + 0.4,
                     dx: (Math.random() - 0.5) * 0.35,
                     dy: (Math.random() - 0.5) * 0.35,
-                    hue: Math.random() > 0.4 ? 230 : 270,
+                    hue: Math.random() > 0.4 ? 190 : 210, // Changed to blues/cyans
                 });
             }
         };
@@ -51,7 +51,7 @@ const HeroCanvas = () => {
                     if (d < 110) {
                         ctx.beginPath();
                         ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
-                        ctx.strokeStyle = `rgba(139,92,246,${0.12 * (1 - d / 110)})`;
+                        ctx.strokeStyle = `rgba(56, 189, 248,${0.12 * (1 - d / 110)})`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
@@ -66,24 +66,24 @@ const HeroCanvas = () => {
     return <canvas ref={canvasRef} className="hero__canvas" />;
 };
 
-/* ── 3-D Floating fire orb with CSS perspective ─────────────────────── */
-const FireOrb = () => (
-    <div className="fire-orb-wrapper">
+/* ── 3-D Floating thunder orb with CSS perspective ─────────────────────── */
+const ThunderOrb = () => (
+    <div className="thunder-orb-wrapper">
         <motion.div
-            className="fire-orb"
+            className="thunder-orb"
             animate={{ rotateY: [0, 360] }}
             transition={{ repeat: Infinity, duration: 12, ease: 'linear' }}
         >
-            <div className="fire-orb__ring fire-orb__ring--1" />
-            <div className="fire-orb__ring fire-orb__ring--2" />
-            <div className="fire-orb__ring fire-orb__ring--3" />
-            <div className="fire-orb__core">
-                <span className="fire-orb__emoji"></span>
-                <span className="fire-orb__label gradient-text fire-text">VJ</span>
+            <div className="thunder-orb__ring thunder-orb__ring--1" />
+            <div className="thunder-orb__ring thunder-orb__ring--2" />
+            <div className="thunder-orb__ring thunder-orb__ring--3" />
+            <div className="thunder-orb__core">
+                <span className="thunder-orb__emoji">⚡</span>
+                <span className="thunder-orb__label gradient-text thunder-text">VJ</span>
             </div>
         </motion.div>
-        <div className="fire-orb__particles-container">
-            <FireParticles intensity={40} style={{ height: '150%', bottom: '-25%' }} />
+        <div className="thunder-orb__particles-container">
+            <ThunderParticles intensity={40} style={{ height: '150%', bottom: '-25%' }} />
         </div>
 
         {/* Floating holo-badges */}
@@ -117,9 +117,9 @@ const Hero = () => {
             <HeroCanvas />
             <div className="hero__orb hero__orb--blue" />
             <div className="hero__orb hero__orb--purple" />
-            {/* Subtle fire ambient at bottom of hero */}
-            <div className="hero__fire-ambient">
-                <FireParticles intensity={120} />
+            {/* Subtle thunder ambient at bottom of hero */}
+            <div className="hero__thunder-ambient">
+                <ThunderParticles intensity={120} />
             </div>
 
             <div className="container hero__container">
@@ -147,7 +147,7 @@ const Hero = () => {
                         transition={{ delay: 0.3, duration: 0.8 }}
                     >
                         Hi, I'm{' '}
-                        <span className="fire-text">Vighnesh JK</span>
+                        <span className="thunder-text">Vighnesh JK</span>
                     </motion.h1>
 
                     {/* Typewriter */}
@@ -199,7 +199,7 @@ const Hero = () => {
                         <motion.a
                             href={resumeFile}
                             download="VighneshJK_Resume.pdf"
-                            className="btn btn-fire"
+                            className="btn btn-thunder"
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -243,14 +243,14 @@ const Hero = () => {
                     </motion.div>
                 </motion.div>
 
-                {/* ─── Right: Fire Orb ──────────────────────────────── */}
+                {/* ─── Right: Thunder Orb ──────────────────────────────── */}
                 <motion.div
                     className="hero__visual"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5, duration: 0.9, type: 'spring', stiffness: 90 }}
                 >
-                    <FireOrb />
+                    <ThunderOrb />
                 </motion.div>
             </div>
 
@@ -273,3 +273,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

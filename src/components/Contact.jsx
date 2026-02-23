@@ -24,8 +24,8 @@ const Contact = () => {
 
     return (
         <section className="contact" id="contact" ref={ref}>
-            <div className="orb orb-fire" style={{ width: 500, height: 500, bottom: '-15%', left: '-15%' }} />
-            <div className="orb orb-gold" style={{ width: 400, height: 400, top: '-10%', right: '-10%' }} />
+            <div className="orb orb-thunder" style={{ width: 500, height: 500, bottom: '-15%', left: '-15%' }} />
+            <div className="orb orb-cyan" style={{ width: 400, height: 400, top: '-10%', right: '-10%' }} />
 
             <div className="container">
                 <motion.div

@@ -32,7 +32,7 @@ const Skills = () => {
 
     return (
         <section className="skills" id="skills" ref={ref}>
-            <div className="orb orb-fire" style={{ width: 500, height: 500, top: '-10%', right: '-15%' }} />
+            <div className="orb orb-thunder" style={{ width: 500, height: 500, top: '-10%', right: '-15%' }} />
             <div className="container">
                 <motion.div
                     className="skills__header"
@@ -64,8 +64,7 @@ const Skills = () => {
                                     <span>{cat.icon}</span>
                                 </div>
                                 <div>
-                                    <h3 className="skill-category__title" style={{ color: cat.color }}>
-                                        {cat.category}
+                                    <h3 className="skill-category__title" style={{ color: cat.color }}> {cat.category}
                                     </h3>
                                     <span className="skill-category__count">{cat.items.length} skills</span>
                                 </div>

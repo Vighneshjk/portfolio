@@ -1,4 +1,4 @@
-import FireBackground from './components/FireBackground';
+import ThunderBackground from './components/ThunderBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,8 +12,8 @@ import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <>
-      {/* Animated fire background (fixed behind everything) */}
-      <FireBackground />
+      {/* Animated thunder background (fixed behind everything) */}
+      <ThunderBackground />
 
       {/* Sticky Navigation */}
       <Navbar />

@@ -68,7 +68,7 @@ export const skills = [
     {
         category: 'AI & ML',
         icon: '🤖',
-        color: '#f59e0b',
+        color: '#22d3ee',
         items: [
             { name: 'OpenCV', level: 78 },
             { name: 'TensorFlow / Basic ML', level: 65 },
@@ -163,7 +163,7 @@ export const projects = [
             'Secure database management',
         ],
         tech: ['Django', 'Tailwind CSS'],
-        color: '#f59e0b',
+        color: '#06b6d4',
         github: '#',
         demo: '#',
     },
@@ -197,7 +197,7 @@ export const projects = [
             'Team Collaboration',
         ],
         tech: ['Python', 'TensorFlow', 'Image Processing'],
-        color: '#ef4444',
+        color: '#4f6ef7',
         github: '#',
         demo: '#',
     },

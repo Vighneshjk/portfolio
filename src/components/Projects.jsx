@@ -88,7 +88,7 @@ const Projects = () => {
 
     return (
         <section className="projects" id="projects" ref={ref}>
-            <div className="orb orb-fire" style={{ width: 450, height: 450, bottom: '-5%', left: '-10%' }} />
+            <div className="orb orb-thunder" style={{ width: 450, height: 450, bottom: '-5%', left: '-10%' }} />
             <div className="container">
                 <motion.div
                     className="projects__header"

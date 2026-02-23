@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { profile, hireMe } from '../data/portfolioData';
 import { FiDownload, FiCheckCircle, FiMapPin, FiCalendar, FiMail } from 'react-icons/fi';
 import resumeFile from '../assets/vighneshjk.pdf';
-import FireParticles from './FireParticles';
+import ThunderParticles from './ThunderParticles';
 import './About.css';
 
 const About = () => {
@@ -12,8 +12,8 @@ const About = () => {
 
     return (
         <section className="about" id="about" ref={ref}>
-            <div className="orb orb-fire" style={{ width: 500, height: 500, top: '5%', left: '-10%' }} />
-            <FireParticles intensity={40} style={{ opacity: 0.4 }} />
+            <div className="orb orb-thunder" style={{ width: 500, height: 500, top: '5%', left: '-10%' }} />
+            <ThunderParticles intensity={40} style={{ opacity: 0.4 }} />
 
             <div className="container">
                 <div className="about__grid">

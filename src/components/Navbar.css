@@ -9,7 +9,7 @@
 }
 
 .navbar--scrolled {
-    background: rgba(5, 8, 22, 0.85);
+    background: rgba(2, 6, 23, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -80,7 +80,7 @@
     left: 8px;
     right: 8px;
     height: 2px;
-    background: linear-gradient(90deg, var(--fire-core), var(--fire-mid));
+    background: linear-gradient(90deg, var(--thunder-core), var(--thunder-mid));
     border-radius: 2px;
 }
 
@@ -90,8 +90,8 @@
     white-space: nowrap;
 }
 
-/* ── Fire button (shared across navbar + hero) ──────── */
-.btn-fire {
+/* ── Thunder button (shared across navbar + hero) ──────── */
+.btn-thunder {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -102,9 +102,9 @@
     cursor: pointer;
     border: none;
     text-decoration: none;
-    background: linear-gradient(135deg, var(--fire-core), var(--fire-mid));
+    background: linear-gradient(135deg, var(--thunder-core), var(--thunder-mid));
     color: #fff;
-    box-shadow: 0 4px 20px rgba(255, 106, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 210, 255, 0.4);
     transition: all 0.3s ease;
     white-space: nowrap;
     position: relative;
@@ -112,9 +112,9 @@
     font-family: var(--font-main);
 }
 
-.btn-fire:hover {
+.btn-thunder:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 36px rgba(255, 106, 0, 0.65);
+    box-shadow: 0 8px 36px rgba(0, 210, 255, 0.65);
 }
 
 /* Hamburger */
@@ -193,7 +193,7 @@
 
 .mobile-link:hover,
 .mobile-link--active {
-    color: var(--fire-core);
+    color: var(--thunder-core);
 }
 
 @media (max-width: 900px) {
