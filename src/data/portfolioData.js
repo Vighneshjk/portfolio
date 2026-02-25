@@ -100,7 +100,7 @@ export const projects = [
     {
         id: 1,
         emoji: '🖐',
-        title: 'Sign Language Recognition System',
+        title: 'Sign Language Recognition System (ongoing)',
         description:
             'An AI-based real-time sign language detection system using Python, OpenCV, and machine learning. Captures hand gestures through a webcam and translates them into readable text.',
         features: [
@@ -170,7 +170,7 @@ export const projects = [
     {
         id: 5,
         emoji: '☁️',
-        title: 'CloudShare',
+        title: 'CloudShare (Completed)',
         description:
             'A secure cloud-based file sharing web application allowing users to upload, manage, and share files with ease from anywhere.',
         features: [

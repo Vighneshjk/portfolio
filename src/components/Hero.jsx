@@ -198,12 +198,13 @@ const Hero = () => {
                     >
                         <motion.a
                             href={resumeFile}
-                            download="VighneshJK_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="btn btn-thunder"
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <FiDownload /> Download Resume
+                            <FiDownload /> View Resume
                         </motion.a>
                         <motion.button
                             className="btn btn-outline"

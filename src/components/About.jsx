@@ -32,6 +32,8 @@ const About = () => {
                                         src={profile.avatar}
                                         alt={profile.name}
                                         className="profile-avatar"
+                                        onContextMenu={(e) => e.preventDefault()}
+                                        draggable="false"
                                     />
                                     <span className="status-indicator" title="Available for Hire" />
                                 </div>
@@ -64,8 +66,8 @@ const About = () => {
                             </div>
 
                             <div className="profile-card__actions">
-                                <a href={resumeFile} download="VighneshJK_Resume.pdf" className="btn btn-primary btn-full">
-                                    <FiDownload /> Download CV
+                                <a href={resumeFile} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-full">
+                                    <FiDownload /> View CV
                                 </a>
                             </div>
                         </div>
