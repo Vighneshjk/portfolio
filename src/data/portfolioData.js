@@ -111,7 +111,7 @@ export const projects = [
         ],
         tech: ['Python', 'OpenCV', 'Machine Learning'],
         color: '#4f6ef7',
-        github: '#',
+        github: 'https://github.com/Vighneshjk/sign-language-detection',
         demo: '#',
     },
     {
