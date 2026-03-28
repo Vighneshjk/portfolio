@@ -37,8 +37,8 @@ export const skills = [
             { name: 'HTML5', level: 90 },
             { name: 'CSS3', level: 85 },
             { name: 'Tailwind CSS', level: 82 },
-            { name: 'JavaScript', level: 75 },
-            { name: 'React.js', level: 70 },
+            { name: 'JavaScript', level: 85 },
+            { name: 'React.js', level: 75 },
             { name: 'Responsive UI Design', level: 88 },
         ],
     },
@@ -48,10 +48,10 @@ export const skills = [
         color: '#8b5cf6',
         items: [
             { name: 'Python', level: 92 },
-            { name: 'Django', level: 90 },
-            { name: 'React (Frontend)', level: 70 },
+            { name: 'Django', level: 95 },
+            { name: 'React (Frontend)', level: 75 },
             { name: 'FastAPI', level: 95 },
-            { name: 'REST API Development', level: 82 },
+            { name: 'REST API Development', level: 90 },
 
         ],
     },
@@ -77,6 +77,9 @@ export const skills = [
             { name: 'Machine Learning', level: 85 },
             { name: 'PyTorch', level: 85 },
             { name: 'Computer Vision', level: 85 },
+            { name: 'LangChain', level: 80 },
+            { name: 'Prompt Engineering', level: 80 },
+            { name: 'XGBoost', level: 75 },
 
         ],
     },
@@ -85,12 +88,13 @@ export const skills = [
         icon: '☁️',
         color: '#10b981',
         items: [
-            { name: 'Git & GitHub', level: 88 },
+            { name: 'Git & GitHub', level: 95 },
             { name: 'Railway Deployment', level: 80 },
-            { name: 'AWS (Basic)', level: 55 },
+            { name: 'AWS (Basic)', level: 60 },
             { name: 'Razorpay Integration', level: 75 },
             { name: 'ngrok', level: 100 },
             { name: 'Docker', level: 75 },
+            { name: 'Unity', level: 75 },
 
         ],
     },
@@ -187,7 +191,7 @@ export const projects = [
     {
         id: 6,
         emoji: '🍃',
-        title: 'Guava Disease Detection (Team Project)',
+        title: 'Guava Disease Detection',
         description:
             'A collaborative AI project to detect diseases in guava plants using image processing and deep learning. Helps farmers identify issues early for better crop management.',
         features: [
@@ -199,6 +203,55 @@ export const projects = [
         tech: ['Python', 'TensorFlow', 'Image Processing'],
         color: '#4f6ef7',
         github: '#',
+        demo: '#',
+    },
+    {
+        id: 7,
+        emoji: '💳',
+        title: 'Credit Card Detection',
+        description:
+            'A machine learning project focused on detecting fraudulent credit card transactions to enhance financial security.',
+        features: [
+            'Data Preprocessing',
+            'Anomaly Detection',
+            'ML Classification Model',
+            'Team Collaboration',
+        ],
+        tech: ['Python', 'Machine Learning', 'XGBoost'],
+        color: '#8b5cf6',
+        github: 'https://github.com/Vighneshjk/credit_card_detection',
+        demo: '#',
+    },
+    {
+        id: 8,
+        emoji: '🦯',
+        title: 'Blind Object Detection',
+        description:
+            'An assistive technology project using computer vision to detect objects in real-time, aiding visually impaired individuals in navigation.',
+        features: [
+            'Real-time Object Detection',
+            'Audio Feedback Integration',
+            'Computer Vision Model',
+        ],
+        tech: ['Python', 'OpenCV', 'Machine Learning', 'Unity'],
+        color: '#06b6d4',
+        github: 'https://github.com/Vighneshjk/blind_object_detection',
+        demo: '#',
+    },
+    {
+        id: 9,
+        emoji: '🌐',
+        title: 'Neo (3D Animated Website)',
+        description:
+            'A futuristic, interactive 3D animated website providing an immersive digital experience built with modern web rendering tools.',
+        features: [
+            '3D Rendering',
+            'Interactive Animations',
+            'Immersive User Interface',
+        ],
+        tech: ['React', 'Three.js', 'JavaScript'],
+        color: '#4f6ef7',
+        github: 'https://github.com/Vighneshjk/3d_ecomerce',
         demo: '#',
     },
 ];
