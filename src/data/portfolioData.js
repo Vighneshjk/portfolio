@@ -104,7 +104,7 @@ export const projects = [
     {
         id: 1,
         emoji: '🖐',
-        title: 'Sign Language Recognition System (ongoing)',
+        title: 'Sign Language Recognition System ',
         description:
             'An AI-based real-time sign language detection system using Python, OpenCV, and machine learning. Captures hand gestures through a webcam and translates them into readable text.',
         features: [
@@ -138,7 +138,7 @@ export const projects = [
     {
         id: 3,
         emoji: '🚗',
-        title: 'Rydex Booking System',
+        title: 'Rydex Booking System (ongoing)',
         description:
             'A full-stack cab booking web application similar to Uber/Ola, allowing users to book rides and manage trip details seamlessly.',
         features: [
@@ -156,7 +156,7 @@ export const projects = [
     {
         id: 4,
         emoji: '📚',
-        title: 'Book Hive',
+        title: 'Book Hive (ongoing)',
         description:
             'An online book management and marketplace platform where users can browse, add, and manage books with a clean and intuitive interface.',
         features: [
@@ -174,7 +174,7 @@ export const projects = [
     {
         id: 5,
         emoji: '☁️',
-        title: 'CloudShare (Completed)',
+        title: 'CloudShare',
         description:
             'A secure cloud-based file sharing web application allowing users to upload, manage, and share files with ease from anywhere.',
         features: [
